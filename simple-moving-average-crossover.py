@@ -39,6 +39,7 @@ cerebro.broker.setcommission(commission=0.001)
 
 # Run the backtest
 cerebro.run()
+cerebro.plot()
 
 # Print the final portfolio value
 print('Final portfolio value: ${}'.format(cerebro.broker.getvalue()))
