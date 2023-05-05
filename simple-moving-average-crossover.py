@@ -2,7 +2,7 @@ import backtrader as bt
 import yfinance as yf
 
 #Define the variables
-per = 12
+per = 5
 initial_cash = 100000
 
 # Define the strategy
@@ -17,7 +17,7 @@ class MyStrategy(bt.Strategy):
             self.sell()
 
 # Download data from Yahoo Finance
-data = yf.download('AAPL', start='2010-01-01', end='2022-01-01')
+data = yf.download('SPY', start='2017-01-01', end='2022-01-01')
 
 # Create a Backtrader feed from the Yahoo Finance data
 data_feed = bt.feeds.PandasData(dataname=data)
